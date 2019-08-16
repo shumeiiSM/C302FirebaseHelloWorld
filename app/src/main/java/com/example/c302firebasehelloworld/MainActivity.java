@@ -75,12 +75,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void btnUpdateOnClick(View v) {
-//        String text = etMessage.getText().toString();
-//        docRef.update("text", text,"color", "red");
+        // SET METHOD
         String text = etMessage.getText().toString();
         String priority = etPriority.getText().toString();
         Message msg = new Message(text, priority);
         docRef.set(msg);
+
+        // UPDATE METHOD
+//        String text = etMessage.getText().toString();
+//        String priority = etPriority.getText().toString();
+//        docRef.update("text", text, "priority", priority, "color", "red");
 
     }
 }
